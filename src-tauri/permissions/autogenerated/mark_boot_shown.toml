@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-mark-boot-shown"
+description = "Enables the mark_boot_shown command without any pre-configured scope."
+commands.allow = ["mark_boot_shown"]
+
+[[permission]]
+identifier = "deny-mark-boot-shown"
+description = "Denies the mark_boot_shown command without any pre-configured scope."
+commands.deny = ["mark_boot_shown"]

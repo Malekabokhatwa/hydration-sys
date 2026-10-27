@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "hydration.sys",
+  "mainBinaryName": "hydration-sys",
+  "version": "1.0.0",
+  "identifier": "io.github.malekabokhatwa.hydrationsys",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "hydration.sys",
+        "width": 440,
+        "height": 700,
+        "minWidth": 360,
+        "minHeight": 560,
+        "resizable": true,
+        "visible": false,
+        "focus": false,
+        "center": true,
+        "backgroundColor": "#101410"
+      }
+    ],
+    "security": {
+      "csp": {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "style-src": "'self'",
+        "img-src": "'self' data:",
+        "font-src": "'self'",
+        "connect-src": "ipc: http://ipc.localhost",
+        "object-src": "'none'",
+        "base-uri": "'none'",
+        "form-action": "'none'",
+        "frame-ancestors": "'none'"
+      },
+      "freezePrototype": true
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "rpm", "appimage", "nsis", "msi"],
+    "category": "Utility",
+    "shortDescription": "A terminal pixel pet that reminds you to drink water",
+    "longDescription": "hydration.sys is a tiny terminal-styled pixel pet that lives in your tray, reminds you to drink water during your active hours, gets hungry when you forget, and keeps a git-style history of every drink. All data stays on this computer.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.ico"
+    ],
+    "linux": {
+      "deb": { "desktopTemplate": "../packaging/linux/hydration-sys.desktop.hbs" },
+      "rpm": { "desktopTemplate": "../packaging/linux/hydration-sys.desktop.hbs" }
+    },
+    "windows": {
+      "nsis": { "installMode": "currentUser" }
+    }
+  }
+}

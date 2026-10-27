@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-log-drink"
+description = "Enables the log_drink command without any pre-configured scope."
+commands.allow = ["log_drink"]
+
+[[permission]]
+identifier = "deny-log-drink"
+description = "Denies the log_drink command without any pre-configured scope."
+commands.deny = ["log_drink"]

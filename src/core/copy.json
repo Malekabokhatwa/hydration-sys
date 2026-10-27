@@ -1,0 +1,150 @@
+{
+  "byte": {
+    "log": [
+      "+{ml} accepted. {name}.exe is thriving.",
+      "write ok: {ml} committed to {name}.",
+      "{name} received {ml}. packet loss: 0%.",
+      "glug.wav played successfully. +{ml}.",
+      "{ml} in. {name} does a tiny victory spin.",
+      "hydration buffer +{ml}. {name} approves this patch.",
+      "nice. {name} logged {ml} and is now 3% more sentient.",
+      "sip detected. {name}'s pixels got crisper.",
+      "+{ml}. {name} would high five you but has no hands."
+    ],
+    "reminder": [
+      "psst. it's been a while. {name} is running on fumes.",
+      "{name} pinged you. no rush. but also a little rush.",
+      "friendly cron job: water o'clock.",
+      "{name} is staring at the water bottle. meaningfully.",
+      "low fluid warning (the gentle kind). one sip?",
+      "{name} queued a reminder: hydrate when you get a sec.",
+      "ding. your terminal pet would like some h2o.",
+      "small sip, big uptime. {name} believes in you.",
+      "{name} checked the logs. last drink was a while ago."
+    ],
+    "fed": [
+      "{name} is idling happily.",
+      "all systems nominal. {name} is vibing.",
+      "{name} is defragmenting a puddle.",
+      "{name} is watching your cursor with mild interest.",
+      "uptime good. {name} is content.",
+      "{name} is humming in 8-bit.",
+      "{name} is counting pixels. it has many.",
+      "{name} is chilling in the terminal."
+    ],
+    "peckish": [
+      "{name} is a little thirsty. no big deal.",
+      "{name} glanced at the water bottle twice.",
+      "{name}'s cache could use a refill soon.",
+      "{name} is thinking about water. casually.",
+      "slightly parched. {name} is still smiling.",
+      "{name} is doing a quiet little stretch. thirsty-ish.",
+      "{name} wonders if you have water nearby.",
+      "low priority ticket: {name} would like a sip."
+    ],
+    "hungry": [
+      "{name} is getting hungry... hydration.sys needs input.",
+      "{name} is refreshing the water feed. nothing yet.",
+      "stomach.log: grrr. {name} could use a sip.",
+      "{name} is rationing pixels until the next drink.",
+      "{name}'s fps is dropping. water would fix it.",
+      "awaiting input... {name} is very patiently waiting.",
+      "{name} found an empty cup in the cache.",
+      "{name} is doing the sad little hop."
+    ],
+    "veryHungry": [
+      "{name} is sitting in the corner buffering. a sip would help.",
+      "{name} entered power saving mode. one log restores it.",
+      "{name}: [||||      ] still loading... thirstily.",
+      "{name} is mostly static right now. water fixes static.",
+      "connection to {name} unstable. try hydration.",
+      "{name} curled up next to the scrollbar. still hopeful.",
+      "{name} is dreaming about rivers. no pressure.",
+      "{name} is at 1 bar. it happens. one sip and we're back."
+    ],
+    "recovered": [
+      "system restored. {name} forgives you. mostly.",
+      "reboot successful. {name} is back online.",
+      "{name} un-buffered. thank you for your service.",
+      "rehydrated. {name} has regained full pixel count.",
+      "{name} is wiggling again. all is well.",
+      "fault cleared. {name} never doubted you. much.",
+      "{name} emerged from the corner, refreshed.",
+      "patch applied. {name} is feeling sharp."
+    ],
+    "goal": [
+      "daily quest complete. no bonus points for overdoing it.",
+      "goal reached. {name} is set for the day.",
+      "100%. {name} is chilling. you can ignore the bottle now.",
+      "build passed. {name} is done asking for today.",
+      "today's quota: done. {name} is logging off reminders.",
+      "{name} is fully charged. that's the whole goal.",
+      "all checks green. see you tomorrow, says {name}.",
+      "mission complete. extra water won't earn extra xp."
+    ],
+    "morning": [
+      "good morning. {name} booted with 0 mL and big dreams.",
+      "boot sequence complete. {name} is ready for a new day.",
+      "new day, new log. {name} is stretching its pixels.",
+      "{name} woke up. coffee is fine, water is also fine.",
+      "rise and sip. {name} has opened today's log.",
+      "{name}.service started. today's goal: {goal}.",
+      "morning! {name} is warming up the scanlines.",
+      "fresh branch checked out for today. {name} says hi."
+    ],
+    "quiet": [
+      "quiet hours. {name} is keeping reminders to itself.",
+      "{name} is in do-not-disturb mode. logging still works.",
+      "shh. {name} is reading the docs quietly.",
+      "reminders muted for now. {name} is just vibing.",
+      "{name} is idling quietly. you're off the hook.",
+      "silent mode. {name} won't ping you.",
+      "{name} lowered its volume to zero. by design.",
+      "quiet time. {name} will be here when you're back."
+    ],
+    "offHours": [
+      "{name} is asleep. zzz. logging still works.",
+      "after hours. {name} is dreaming in monochrome.",
+      "{name} clocked out. hunger is paused until morning.",
+      "night mode. {name} is snoozing next to the cursor.",
+      "{name} is powered down for the night. no reminders.",
+      "zzz. {name} will boot again during active hours.",
+      "{name} is resting. nothing to do until tomorrow.",
+      "lights out. {name} is curled up in the status bar."
+    ],
+    "paused": [
+      "reminders paused. {name} is holding still.",
+      "{name} is on pause. hunger is frozen too.",
+      "paused. {name} won't ping you for now.",
+      "{name} hit the pause key. take your time."
+    ]
+  },
+  "chill": {
+    "log": ["+{ml} logged."],
+    "reminder": ["time for some water.", "maybe a sip?"],
+    "fed": ["all good."],
+    "peckish": ["a drink soon would be nice."],
+    "hungry": ["it's been a while since your last drink."],
+    "veryHungry": ["no drink logged in a long while."],
+    "recovered": ["back on track."],
+    "goal": ["goal reached for today."],
+    "morning": ["new day. goal: {goal}."],
+    "quiet": ["quiet hours. reminders are muted."],
+    "offHours": ["outside active hours."],
+    "paused": ["reminders paused."]
+  },
+  "plain": {
+    "log": ["Logged {ml}."],
+    "reminder": ["Reminder: consider having some water."],
+    "fed": ["On track."],
+    "peckish": ["A drink would be due soon."],
+    "hungry": ["No water logged for a while."],
+    "veryHungry": ["No water logged for a long while."],
+    "recovered": ["Back on track."],
+    "goal": ["Daily goal reached."],
+    "morning": ["New day. Goal: {goal}."],
+    "quiet": ["Quiet hours: reminders muted."],
+    "offHours": ["Outside active hours."],
+    "paused": ["Reminders paused."]
+  }
+}

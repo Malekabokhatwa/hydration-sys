@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-reset-all"
+description = "Enables the reset_all command without any pre-configured scope."
+commands.allow = ["reset_all"]
+
+[[permission]]
+identifier = "deny-reset-all"
+description = "Denies the reset_all command without any pre-configured scope."
+commands.deny = ["reset_all"]

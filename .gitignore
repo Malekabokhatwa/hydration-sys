@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-mock
+src-tauri/target
+src-tauri/gen/schemas
+test-results
+playwright-report
+.env*
+CLAUDE.local.md
+*.log
