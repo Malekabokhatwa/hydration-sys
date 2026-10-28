@@ -107,5 +107,8 @@ hand, real login autostart after a reboot, close-to-tray via the window's
 close button on Hyprland, anything on Windows. See the checklist in the final
 report / README.
 
-Secrets: none in this repo. Machine-local notes (e.g. credentials) belong in
-`CLAUDE.local.md`, which is gitignored.
+**The GitHub repo is public** (since 2026-10-28). Secrets: none in this repo
+or its history. Machine-local notes (e.g. credentials) belong in
+`CLAUDE.local.md`, which is gitignored; never commit them, and keep README
+screenshots on mock data, not Malek's real history. No LICENSE yet (default:
+all rights reserved); don't add one without asking.
