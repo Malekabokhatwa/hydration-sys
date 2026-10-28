@@ -3,6 +3,7 @@ name = "hydration-sys"
 version = "1.0.0"
 description = "A tiny terminal pixel pet that reminds you to drink water"
 authors = ["Malek"]
+license = "MIT"
 edition = "2021"
 rust-version = "1.80"
 

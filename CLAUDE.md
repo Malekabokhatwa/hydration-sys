@@ -110,5 +110,6 @@ report / README.
 **The GitHub repo is public** (since 2026-10-28). Secrets: none in this repo
 or its history. Machine-local notes (e.g. credentials) belong in
 `CLAUDE.local.md`, which is gitignored; never commit them, and keep README
-screenshots on mock data, not Malek's real history. No LICENSE yet (default:
-all rights reserved); don't add one without asking.
+screenshots on mock data, not Malek's real history. Licensed MIT. Commits use
+the GitHub no-reply address (global git config); history was rewritten once
+to remove the real email, so never commit with it again.

@@ -198,3 +198,7 @@ app's switch; turn it off first), then delete
    to hide/show, quit from it and confirm the process is gone (Task Manager).
 4. Turn on launch on sign-in, sign out and in: the app starts quietly (hidden
    if the tray was confirmed). Launch it again: the existing window appears.
+
+## License
+
+[MIT](LICENSE)
