@@ -1,21 +1,30 @@
-# hydration.sys
+<p align="center">
+  <img src="docs/icon.svg" width="112" alt="hydration.sys icon: Byte, a pixel water droplet, in a terminal tile">
+</p>
 
-A tiny terminal-styled pixel pet that lives in your tray, nudges you to drink
-water during your active hours, gets hungry when you forget, and keeps a
-git-style history of every drink. Windows and Linux (built for Omarchy:
-Hyprland + Quickshell). Local only: no account, no cloud, no network.
+<h1 align="center">hydration.sys</h1>
 
-```
-hydration.sys█                 tue 27 oct 2026  streak 4d
- 1 today   2 log   3 config
-┤ pet.status ├──────────────────────────────────────────
-              (Byte, a 16x18 pixel droplet that fills
-               with water as your day goes on)
-  > +250 mL accepted. byte.exe is thriving.
-┤ hydration ├───────────────────────────────────────────
-        [############------------]  1,150 / 2,000 mL 57%
-   [ +150 mL ]   [ +250 mL ]   [ +500 mL ]
-```
+<p align="center">
+  <b>A tiny terminal pet that runs on water.</b><br>
+  Byte lives in your tray, nudges you to drink during your active hours,<br>
+  gets hungry when you forget, and keeps a git-style log of every sip.
+</p>
+
+<p align="center">
+  <code>linux · omarchy (hyprland + quickshell)</code>&nbsp;
+  <code>windows</code>&nbsp;
+  <code>local only · no account · no network</code>
+</p>
+
+<p align="center">
+  <img src="docs/screens/today.png" width="260" alt="Today tab: Byte, today's progress bar, quick-add buttons and today's log">
+  <img src="docs/screens/graph.png" width="260" alt="Log tab: weekly summary, 20-week contribution heatmap and a per-day diff">
+  <img src="docs/screens/config.png" width="260" alt="Config tab: system status, tray and startup settings">
+</p>
+
+<p align="center"><sub>shown with the Omarchy Nord theme. Byte recolors itself to whatever theme you run.</sub></p>
+
+## What it does
 
 - **Byte** gets peckish, hungry and very hungry (slumped in the corner,
   buffering) the longer you go without a drink *inside active hours*. One drink
@@ -39,6 +48,14 @@ hydration.sys█                 tue 27 oct 2026  streak 4d
 
 The daily goal (2,000 mL by default) is only an example. Needs vary; this is
 not medical advice, and Byte is not a health indicator.
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/screens/setup.png" width="220" alt="First-run setup asking for the pet's name"><br><sub>first run: name your pet</sub></td>
+    <td align="center"><img src="docs/screens/very-hungry.png" width="220" alt="Byte slumped in the corner, buffering, after hours without water"><br><sub>four hours without water</sub></td>
+    <td align="center"><img src="docs/screens/log.png" width="220" alt="git log view of drinks with commit hashes and tags"><br><sub><code>git log</code> for your water</sub></td>
+  </tr>
+</table>
 
 ## Install on Omarchy / Arch (user-local, no sudo)
 
@@ -106,6 +123,8 @@ scripts/guarded-test.sh       # the real binary in Xvfb + private D-Bus with a
                               # mock notification server and tray watcher
 npx tauri build --no-bundle   # release binary only
 npx tauri build --bundles deb rpm appimage
+npm run icons                 # app/tray icons + docs/icon.svg from the sprite grid
+node scripts/readme-shots.mjs # README screenshots (docs/screens)
 ```
 
 Useful environment variables (all builds):
@@ -132,6 +151,14 @@ Manual alternative to the switch (Hyprland Lua config, Omarchy 4+), in
 `~/.config/hypr/autostart.lua`: `o.launch_on_start("$HOME/.local/bin/hydration-sys --autostarted")`
 (use the absolute path settings shows). Legacy `hyprland.conf`:
 `exec-once = ~/.local/bin/hydration-sys --autostarted`. Use one route, not both.
+
+## Rendering note (Linux)
+
+On some Wayland setups, especially hybrid Intel + NVIDIA laptops, WebKitGTK's
+DMA-BUF renderer can stop repainting: the window shows a stale frame until it
+is resized, so it looks frozen. hydration.sys sets
+`WEBKIT_DISABLE_DMABUF_RENDERER=1` for itself on Linux to avoid that. To try
+the DMA-BUF path anyway, launch it with `WEBKIT_DISABLE_DMABUF_RENDERER=0`.
 
 ## Data, backup, privacy
 

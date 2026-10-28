@@ -68,6 +68,8 @@ npx playwright test                     # 14 headless UI tests (starts vite --mo
 npx tauri build --no-bundle             # release binary -> src-tauri/target/release/hydration-sys
 scripts/guarded-test.sh                 # 22 native checks, isolated from the real session
 scripts/install-linux.sh                # install to ~/.local (rebuild first if code changed)
+npm run icons                           # icons + docs/icon.svg
+node scripts/readme-shots.mjs           # README screenshots -> docs/screens
 ```
 
 `cargo build --release` alone does NOT embed the frontend (it points at the dev
@@ -85,6 +87,12 @@ server); always build through `npx tauri build`.
 - The Omarchy tray hides icons in a drawer unless pinned; the SNI id is
   `tray-icon tray app main`.
 - Wayland app class is `hydration-sys`.
+- "Freezes" on tab switch (2026-10-28, Malek's hybrid Intel/NVIDIA laptop):
+  input and DOM updates kept working, but WebKitGTK's DMA-BUF renderer stopped
+  presenting frames until the window was resized. `main.rs` now sets
+  `WEBKIT_DISABLE_DMABUF_RENDERER=1` on Linux unless already set. The stall
+  never reproduced on demand (hide/show, workspace switch, screensaver and tray
+  paths were all tried); confirm with a resize if it ever comes back.
 
 ## Status (2026-10-27)
 

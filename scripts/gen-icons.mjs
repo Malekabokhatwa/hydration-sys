@@ -61,6 +61,9 @@ function render(name, content, size) {
 }
 
 const master = render("icon", appIcon(), 512);
+// Vector copy for the README.
+mkdirSync(join(root, "docs"), { recursive: true });
+writeFileSync(join(root, "docs", "icon.svg"), appIcon());
 for (const [name, size] of [["32x32", 32], ["64x64", 64], ["128x128", 128], ["128x128@2x", 256]]) {
   execFileSync("magick", [master, "-filter", "point", "-resize", `${size}x${size}`, "-strip", `PNG32:${join(out, `${name}.png`)}`]);
 }
